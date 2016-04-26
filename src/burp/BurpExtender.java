@@ -15,6 +15,8 @@ public class BurpExtender extends BaseExtender {
 
     @Override
     protected void initialize() {
+        extensionName = "UCE Check";
+        
         try {
             boolean unlimited = Cipher.getMaxAllowedKeyLength("RC5") >= 256;
             callbacks.printOutput("Unlimited cryptography enabled? " + unlimited);
